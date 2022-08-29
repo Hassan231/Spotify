@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,300;1,400&family=Varela+Round&display=swap");
+body {
+  background-color: antiquewhite;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  font-family: "ubuntu", sans-serif;
+}
+nav ul {
+  display: flex; /*order item in a single line from vertical to horizontal*/
+  list-style-type: none;
+  height: 65px;
+  background-color: black; /*black header line*/
+  color: white;
+  align-items: center;
+}
+nav ul li {
+  padding: 0 12px; /*top/bottom 0; left/right 12 [spacing between home and about]*/
+}
+.brand img {
+  width: 44px;
+  padding: 0 8px; /*spacing between logo and spotify*/
+}
+.brand {
+  display: flex; /*for spotifyto be certer allign with home and about*/
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+/*-------------------fOR BOTTOM LINE-----------------------*/
+.bottom {
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  color: white;
+  /*[24:52]below this due to myProgressBar is not center alligning*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /*Choice not necessary*/
+}
+/*[22:49]change height because it covers all area and to place footer to its place*/
+
+.container {
+  background-color: black;
+  color: white;
+  min-height: 72vh;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  width: 70%;
+  margin: 23px auto; /*create box with flex and allign to center*/
+  border-radius: 12px; /*edges curves of box*/
+  padding: 34px;
+  background-image: url("bg.jpg");
+}
+
+#myProgressBar {
+  width: 80vw;
+  text-align: center;
+  cursor: pointer;
+}
+.icons {
+  margin-top: 14px;
+}
+/*if we point to the icon for play*/
+.icons i {
+  cursor: pointer;
+}
+.songItem {
+  background-color: red; /*Specify portion with color*/
+  
+  height: 50px;
+  display: flex;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 23px;
+  
+}
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 20px;
+}
+.timeStamp{
+  margin: 0 30px;
+}
+.timeStamp i{
+  cursor: pointer;
+
+}
+.songItemContainer{
+  margin-top: 80px;
+}
+.songInfo{
+  position: absolute;
+  left: 10vw;
+}
+.songInfo img{
+  opacity: 0;/*changes through javascript 1 for appear*/ 
+  transition: opacity 0.2s ease-in;
+}
